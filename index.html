@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-UA-Compatible" content="ie=edge">
     <title>Weather Dashboard</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
@@ -17,20 +18,25 @@
         </ol>
       </nav>
     <!--search bar-->
-    <form id="search-form">
+    <form class="search-form">
         <label for="search-input">search for a city:</label>
-        <input type="text" id="search-input"><br>
-  
+        <input type="text" class="input-city"></input>  
     <!-- Button triggers new search to be added -->
-        <input id="add-city" type="submit" value="Search">
-      </form>  
+        <button id="searchBtn" type="submit" value="Search">Search</button>
+    </form>  
     <!--search info will be displayed here-->
-    <div id="day-view"></div>
-    <div class="city"></div>
-    <div class="wind"></div>
-    <div class="humidity"></div>
-    <div class="temp"></div>
-    <div class="temp"></div>
+    <main>
+      <section class="location">
+        <div class="city"></div>
+        <div class="date"></div>
+      </section>
+    <div class="current">
+      <div class="temperature"></div>
+      <div class="humidity"></div>
+      <div class="wind-speed"></div>
+      <div class="uv-index"></div>
+    </div>
+    </main>
     <!--5 dy forcast buttons will be displayed here-->  
     <h3>5-Day Forecast:</h3>
     <div id="buttons-view"></div>
